@@ -94,6 +94,7 @@ Follow the white rabbit.
 Knock, knock, Neo."""
 
     try:
+        system('clear')
         for line in lines:
             print(line, end='')
 
@@ -131,6 +132,8 @@ def main():
 
             if color:
                 wake_up_neo(color)
+            else:
+                wake_up_neo('green')
 
         except UnboundLocalError:
             pass
