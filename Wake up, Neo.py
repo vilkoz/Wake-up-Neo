@@ -118,6 +118,9 @@ Knock, knock, Neo."""
 def main():
 
     try:
+        if len(argv) == 1:
+            wake_up_neo("green")
+            exit(1)
         opts, args = getopt(argv[1:], 'hVAC:', ['help', 'version', 'available', 'color='])
 
     except GetoptError: usage()
@@ -132,9 +135,6 @@ def main():
 
             if color:
                 wake_up_neo(color)
-            else:
-                wake_up_neo('green')
-
         except UnboundLocalError:
             pass
 
